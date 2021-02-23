@@ -13,3 +13,7 @@ A python GUI for manage your password informations.
 - ![](https://github.com/eneeesyk/Password-Email-Manager/blob/main/password_manager_screenshots/pass.JPG)
 - ![](https://github.com/eneeesyk/Password-Email-Manager/blob/main/password_manager_screenshots/pass_3.JPG)
 - ![](https://github.com/eneeesyk/Password-Email-Manager/blob/main/password_manager_screenshots/pass4.JPG)
+
+## Updates
+- It does not store data in txt file anymore. I've updated to .json file for more efficiency.
+- 
