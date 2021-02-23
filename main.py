@@ -4,12 +4,13 @@ import random
 import pyperclip
 import json
 
+
 # ---------------------------- PASSWORD SEARCHER ------------------------------- #
 def find_password():
     website = website_entry.get()
     try:
         with open("data.json", "r") as data_file:
-            data = json.load(data_file )
+            data = json.load(data_file)
     except FileNotFoundError:
         messagebox.showwarning(title="Error", message="No data file found! Create first!")
     else:
@@ -17,9 +18,10 @@ def find_password():
             email = data[website]["email"]
             password = data[website]["password"]
             messagebox.showinfo(title=website, message=f"Email: {email}\n"
-                                                               f"Password: {password}")
+                                                       f"Password: {password}")
         else:
             messagebox.showwarning(title="Error", message=f"No details for {website} exists.")
+
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
@@ -114,7 +116,7 @@ password_entry.grid(column=1, row=3)
 # Buttons
 generate_password_button = Button(text="Generate Password", command=generate_password)
 add_button = Button(text="Add", width=44, command=add_data)
-search_button = Button(text= "Search", width=14, command=find_password)
+search_button = Button(text="Search", width=14, command=find_password)
 
 generate_password_button.grid(column=2, row=3)
 search_button.grid(column=2, row=1)
